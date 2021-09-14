@@ -5,14 +5,6 @@ body {
     background-color: var(--light-grayish-blue);
 }
 
-.card {
-    padding:20px;
-    border-radius: 10px;
-    margin: 15px;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    filter: drop-shadow(0px 0px 3px rgb(218, 216, 216));
-}
-
 .card p, .card div {
     font-size: var(--font-size);
 }
@@ -21,18 +13,28 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    margin: 100px;
+    gap: 25px;
 }
-.container .card:first-child {
-    grid-column: 1/3;
+
+.card {
+    padding:25px;
+    border-radius: 10px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    filter: drop-shadow(0px 0px 3px rgb(218, 216, 216));
+}
+
+.card:first-child {
     grid-row: 1;
+    grid-column: 1/3;
 }
 
-.container :nth-child(3) {
-    grid-column: 4;
+.card:last-child {
     grid-row: 1/3;
+    grid-column: 4;
 }
 
-.container :nth-child(5){
+.card:nth-child(4){
     grid-column: 2/4;
 }
 
@@ -67,34 +69,40 @@ body {
 
 
 /* colors */
-.pallete-1 {
+.violet-pallete {
     color: white;
     background-color: var(--violet);
 }
 
-.pallete-2 {
+.grayish-blue-pallete{
     color: white;
     background-color: var(--dark-grayish-blue);
 }
 
-.pallete-3 {
-    color: gray;
+.light-pallete {
+    color:var(--dark-grayish-blue);
     background-color: whitesmoke;
 }
 
-.pallete-4 {
+.dark-blue-pallete {
     color:white;
     background-color: var(--dark-blackish-blue);
 }
 
+.card p, .card .account-type {
+    color:var(--light-gray);
+}
+
+/* making the cards with light colors have slightly darker texts */
+.card.light-pallete p, .card.light-pallete .account-type {
+    color:var(--dark-gray);
+}
+
+/* class to add an image of quotes to the background of a card */
 .bg-quotes {
     background-image: url('images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
     background-position: top 0 right 20%;
     background-size:18%;
-}
-
-.card p, .card .account-type {
-    color:var(--light-gray);
 }
 
