@@ -8,6 +8,11 @@ body {
 .card p, .card div {
     font-size: var(--font-size);
     font-weight: 100;
+    line-height: 1.5em;
+}
+
+.account-type, .quote{
+    opacity: 90%;
 }
 
 /* Grid */
